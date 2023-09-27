@@ -3,7 +3,7 @@ workspace "SpaceShooter"
    location "build"
 
 project "SpaceShooter"
-   kind "ConsoleApp"
+   kind "WindowedApp"
    language "C"
    cdialect "C17"
    targetdir "bin/%{cfg.buildcfg}"
@@ -17,6 +17,7 @@ project "SpaceShooter"
    warnings "Extra"
 
    filter "system:macosx"
+      kind "ConsoleApp"
       links { "OpenGL.framework", "Cocoa.framework", "IOKit.framework", "CoreVideo.framework" }
 
    filter "configurations:Debug"
