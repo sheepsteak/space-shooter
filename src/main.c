@@ -5,13 +5,12 @@
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 600
 
-void update(float delta_time)
+void update(struct game_state *state, float delta_time)
 {
 }
 
-void render(float delta_time)
+void render(struct game_state *state, float delta_time)
 {
-
     DrawRectangle(10, 10, 10, 10, RED);
 }
 

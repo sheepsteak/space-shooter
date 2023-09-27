@@ -1,8 +1,11 @@
 #ifndef GAME_STATE_H
 #define GAME_STATE_H
 
-typedef void (*update_fn)(float delta_time);
-typedef void (*render_fn)(float delta_time);
+struct game_state;
+struct game_state_manager;
+
+typedef void (*update_fn)(struct game_state *state, float delta_time);
+typedef void (*render_fn)(struct game_state *state, float delta_time);
 
 struct game_state
 {

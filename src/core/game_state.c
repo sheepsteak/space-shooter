@@ -39,10 +39,10 @@ void game_state_manager_change_current_state(struct game_state_manager *manager,
 
 void game_state_manager_update(struct game_state_manager *manager, float delta_time)
 {
-    manager->current_state->update(delta_time);
+    manager->current_state->update(manager->current_state, delta_time);
 }
 
 void game_state_manager_render(struct game_state_manager *manager, float delta_time)
 {
-    manager->current_state->render(delta_time);
+    manager->current_state->render(manager->current_state, delta_time);
 }
