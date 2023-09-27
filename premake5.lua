@@ -1,5 +1,6 @@
 workspace "SpaceShooter"
    configurations { "Debug", "Release" }
+   location "build"
 
 project "SpaceShooter"
    kind "ConsoleApp"

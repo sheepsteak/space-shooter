@@ -83,8 +83,7 @@ dkms.conf
 
 .DS_Store
 bin/
-Makefile
-*.make
+build/
 !libs/**/*.lib
 !libs/**/*.a
 !libs/**/*.la
