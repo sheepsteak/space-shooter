@@ -11,6 +11,7 @@ struct game_state
 };
 
 struct game_state *game_state_create(update_fn update, render_fn render);
+struct game_state game_state_init(update_fn update, render_fn render);
 void game_state_destroy(struct game_state *state);
 
 struct game_state_manager

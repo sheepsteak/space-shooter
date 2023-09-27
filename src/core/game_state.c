@@ -9,6 +9,13 @@ struct game_state *game_state_create(update_fn update, render_fn render)
     return state;
 }
 
+struct game_state game_state_init(update_fn update, render_fn render)
+{
+    return (struct game_state){
+        .update = update,
+        .render = render};
+}
+
 void game_state_destroy(struct game_state *state)
 {
     free(state);
