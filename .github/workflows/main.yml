@@ -12,11 +12,16 @@ jobs:
       matrix:
         os:
         - macos-latest
+        - ubuntu-latest
 
     runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v3
+    - if: ${{ matrix.os == 'ubuntu-latest' }}
+      name: Install Linux dependencies
+      run: |
+        sudo apt install -y libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev
     - uses: abel0b/setup-premake@v2.3
       with:
         version: "5.0.0-beta2"

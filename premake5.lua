@@ -20,6 +20,12 @@ project "SpaceShooter"
       libdirs { "libs/macos/**" }
       links { "OpenGL.framework", "Cocoa.framework", "IOKit.framework", "CoreVideo.framework" }
 
+   filter "system:linux"
+      kind "ConsoleApp"
+      cdialect "gnu17"
+      libdirs { "libs/linux/**" }
+      links { "GL", "pthread", "dl", "m", "rt", "X11" }
+
    filter "configurations:Debug"
       defines { "DEBUG" }
       symbols "On"
