@@ -29,3 +29,6 @@ jobs:
       run: |
         premake5 gmake2
         make -C build
+    - name: Unit tests
+      run: |
+        ./bin/SpaceShooterTests/Debug/SpaceShooterTests
