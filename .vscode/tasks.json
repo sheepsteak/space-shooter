@@ -11,6 +11,18 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Test",
+            "type": "shell",
+            "command": "./bin/SpaceShooterTests/Debug/SpaceShooterTests",
+            "dependsOn": [
+                "Build"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         }
     ]
 }

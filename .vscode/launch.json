@@ -11,13 +11,13 @@
             },
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/SpaceShooter",
+            "program": "${workspaceFolder}/bin/SpaceShooter/Debug/SpaceShooter",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "preLaunchTask": "Build"
-        }
+        },
     ]
 }
